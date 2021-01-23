@@ -56,28 +56,33 @@ a {
     content: '/';
     padding: 0 5px;
 }
-.navbar {
+.navbar-wrap {
     background: #0f0f0f;
     padding: 0;
-    position: sticky;
-    top: 0;
 }
-.navbar__content {
+.navbar {
     width: 100%;
     height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0;
 }
 .logo:hover {
     transition: all 0.3s ease;
     opacity: 0.8;
 }
-.menu {
+.navbar__burger {
+    display: none;
+}
+.menu__list {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 .menu a {
     font-size: 14px;
@@ -111,7 +116,7 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #000 url('../img/bg1.jpg') fixed center/cover no-repeat;
+    background: #000 url('../img/bg1.jpg') center/cover no-repeat;
     color: #fff;
 }
 .label__logo {
@@ -216,7 +221,8 @@ a {
 
 .catalogue__link {
     width: 100%;
-    background: url('../img/catalogue.jpg') left center/cover no-repeat;
+    height: 730px;
+    background: url('../img/catalogue.jpg') left top/cover no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -247,8 +253,8 @@ a {
 }
 .previous_collection_img {
     height: 600px;
-    min-width: 880px;
-    background: url('../img/collection.jpg') center/cover no-repeat;
+    width: 100%;
+    background: url('../img/collection.jpg') top center/cover no-repeat;
 }
 .previous_collection_about {
     width: 100%;
@@ -420,6 +426,7 @@ a {
     background: #ffffff66;
     padding: 10px;
     border: none;
+    margin: 0 0 16px;
 }
 .shop__mailing input::placeholder {
     color: #d0d0d0;
@@ -454,4 +461,172 @@ a {
     font-size: 12px;
     line-height: 16px;
     color: #d0d0d0;
+}
+
+@media (max-width: 1200px) {
+    /* header */
+
+    /* section 1 */
+
+    /* section 2 */
+
+    .catalogue {
+        flex-wrap: wrap;
+    }
+    .watches {
+        height: 640px;
+    }
+    .catalogue__link {
+        height: 555px;
+    }
+
+    /* section 3 */
+
+    .previous_collection {
+        flex-wrap: wrap;
+    }
+    .previous_collection_img {
+        height: 555px;
+    }
+    .previous_collection_about {
+        padding: 40px 0;
+    }
+    .previous_collection_about a {
+        margin: 40px 0;
+    }
+
+    /* section 4 */
+
+    .collection .sample {
+        margin: 0 7px 60px;
+    }
+
+    /* section 5 */
+    .brand_labels {
+        flex-wrap: wrap;
+    }
+
+    /* footer */
+}
+@media (max-width: 992px) {
+    /* header */
+
+    /* section 1 */
+
+    /* section 2 */
+
+    /* section 3 */
+
+    /* section 4 */
+
+    /* section 5 */
+
+    /* footer */
+}
+
+@media (max-width: 768px) {
+    /* header */
+
+    .info__workday,
+    .info__worktime,
+    .info__phone::after,
+    .info__workday::after {
+        display: none;
+    }
+    .navbar-wrap .container {
+        padding: 0;
+    }
+    .logo {
+        margin-left: 12px;
+    }
+    .navbar__burger {
+        display: block;
+        position: relative;
+        width: 25px;
+        height: 16px;
+        margin-right: 12px;
+    }
+    .navbar__burger span {
+        background: #fff;
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        left: 0;
+        top: 7px;
+        transition: all 0.5s;
+    }
+    .navbar__burger:before,
+    .navbar__burger:after {
+        content: '';
+        background: #fff;
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        left: 0;
+        transition: all 0.3s;
+    }
+    .navbar__burger:before {
+        top: 0;
+    }
+    .navbar__burger:after {
+        bottom: 0;
+    }
+    .navbar__burger.open span {
+        transform: scale(0);
+    }
+    .navbar__burger.open:before {
+        transform: rotate(-45deg);
+        top: 7px;
+        transition: all 0.3s;
+    }
+    .navbar__burger.open:after {
+        transform: rotate(45deg);
+        bottom: 7px;
+        transition: all 0.3s;
+    }
+    .menu {
+        position: absolute;
+        width: 100%;
+        background: #212529;
+        top: 80px;
+        left: 0;
+        height: 300px;
+        transform: translateX(+100%);
+        opacity: 0;
+        transition: all 0.5s;
+        z-index: -1;
+    }
+    .menu.open {
+        transform: translatex(0);
+        opacity: 0.9;
+        z-index: 1;
+    }
+    .menu__list {
+        display: flex;
+        flex-direction: column;
+    }
+    .menu li {
+        margin: 12px;
+    }
+    .menu__search {
+        padding: 20px;
+    }
+    /* section 1 */
+
+    /* section 2 */
+
+    .catalogue .watches {
+        height: 1020px;
+    }
+    .catalogue .samples {
+        flex-wrap: wrap;
+    }
+
+    /* section 3 */
+
+    /* section 4 */
+
+    /* section 5 */
+
+    /* footer */
 }
