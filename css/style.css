@@ -167,7 +167,7 @@ a {
     text-align: center;
     text-transform: uppercase;
 }
-.catalogue span {
+.catalogue .catalogue__line {
     width: 120px;
     height: 1px;
     background: #fff;
@@ -217,6 +217,9 @@ a {
     font-size: 16px;
     line-height: 21px;
     color: #d0d0d0;
+}
+#carouselControls {
+    display: none;
 }
 
 .catalogue__link {
@@ -616,17 +619,50 @@ a {
     /* section 2 */
 
     .catalogue .watches {
-        height: 1020px;
+        height: 550px;
+    }
+    .catalogue .catalogue__line {
+        width: 120px;
+        height: 1px;
+        background: #fff;
+        margin: 25px 0;
     }
     .catalogue .samples {
-        flex-wrap: wrap;
+        display: none;
+    }
+    #carouselControls {
+        display: block;
+    }
+    .carousel .name {
+        margin: 12px 0 5px;
+    }
+    .carousel-control-prev span,
+    .carousel-control-next span {
+        opacity: 0;
     }
 
     /* section 3 */
+    .previous_collection_img {
+        height: 300px;
+    }
+    .previous_collection_about {
+        padding: 20px 0;
+        margin: 0 20px;
+    }
 
     /* section 4 */
+
+    .collection h2 {
+        padding: 10px 0 0;
+    }
 
     /* section 5 */
 
     /* footer */
+    .shop {
+        flex-wrap: wrap;
+    }
+    .shop h2 {
+        margin: 20px 0;
+    }
 }
