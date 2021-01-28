@@ -142,11 +142,13 @@ a:hover {
     line-height: 28px;
 }
 .label__text {
-    height: 96px;
+    min-height: 96px;
     max-width: 730px;
     padding-top: 80px;
 }
 .label__text p {
+    font-style: normal;
+    font-weight: normal;
     font-size: 16px;
     line-height: 24px;
     text-align: center;
@@ -362,6 +364,8 @@ a:hover {
     text-align: center;
     text-transform: uppercase;
     color: #ffffff;
+    margin-bottom: 0;
+    padding-top: 60px;
 }
 .brands span {
     width: 120px;
@@ -373,6 +377,10 @@ a:hover {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    padding-bottom: 80px;
+}
+.brand_label {
+    margin-right: 30px;
 }
 
 /* footer */
@@ -425,6 +433,11 @@ a:hover {
 }
 .shop__mailing {
     width: 350px;
+    margin-bottom: 20px;
+}
+.shop__mailing form {
+    display: flex;
+    align-items: center;
 }
 .shop__mailing input {
     width: 210px;
@@ -432,7 +445,7 @@ a:hover {
     background: #ffffff66;
     padding: 10px;
     border: none;
-    margin: 0 0 16px;
+    margin: 0;
 }
 .shop__mailing input::placeholder {
     color: #d0d0d0;
@@ -450,9 +463,10 @@ a:hover {
     line-height: 21px;
     letter-spacing: 0.05em;
     color: #fff;
-    background: #000;
+    background: #0f0f0f;
     padding: 10px 15px;
     outline: none;
+    border: none;
 }
 
 .bottom-wrap {
@@ -506,7 +520,7 @@ a:hover {
     /* section 4 */
 
     .collection .sample {
-        margin: 0 7px 60px;
+        margin: 0 10px 60px;
     }
 
     /* section 5 */
@@ -625,6 +639,12 @@ a:hover {
         padding: 20px;
     }
 
+    /* section 1 */
+
+    .label__text {
+        margin: 0 24px;
+    }
+
     /* section 2 */
 
     .catalogue .watches {
@@ -645,24 +665,22 @@ a:hover {
     .carousel .name {
         margin: 12px 0 5px;
     }
-    .carousel-control-prev span,
-    .carousel-control-next span {
-        opacity: 0;
+    .carousel-control-prev {
+        left: -40px;
+    }
+    .carousel-control-next {
+        right: -40px;
     }
     .catalogue__link {
-        height: 360px;
+        height: 420px;
     }
 
     /* section 3 */
     .previous_collection_img {
-        height: 300px;
-    }
-    .previous_collection_about {
-        padding: 20px 0;
-        margin: 0 20px;
+        height: 420px;
     }
     .previous_collection_about a {
-        margin: 20px 0;
+        margin: 25px 0;
     }
 
     /* section 4 */
@@ -675,17 +693,6 @@ a:hover {
     }
     .collection span {
         margin: 20px 0 40px;
-    }
-    .collection .sample {
-        height: 300px;
-        width: 200px;
-        margin: 0 7px 30px;
-    }
-    .collection .watch-wrap {
-        height: 230px;
-    }
-    .collection .watch {
-        width: 190px;
     }
     .collection .name {
         margin: 10px 0 5px;
@@ -704,22 +711,38 @@ a:hover {
     .previous_collection span {
         margin: 20px 0 40px;
     }
+    .previous_collection_about p {
+        margin: 0 16px;
+    }
     .previous_collection_about a {
         margin: 16px 0;
     }
 
     /* section 4 */
     .collection .sample {
-        margin: 0 5px 10px;
+        margin: 0 10px 30px;
     }
 
     /* section 5 */
+    .brands h2 {
+        padding-top: 40px;
+    }
     .brands span {
-        margin: 20px 0 40px;
+        margin: 40px 0 40px;
+    }
+    .brand_labels {
+        padding-bottom: 60px;
     }
 
     /* footer */
     .shop {
         padding: 20px;
+    }
+    .shop__mailing form {
+        flex-direction: column;
+        align-items: start;
+    }
+    .shop__mailing button {
+        margin-top: 10px;
     }
 }
